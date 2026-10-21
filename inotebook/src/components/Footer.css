@@ -1,0 +1,129 @@
+.inotebook-footer {
+    margin-top: 24px;
+    padding: 54px 0 20px;
+    background: #142139;
+    color: #fff;
+    font-family: inherit;
+}
+
+.inotebook-footer .container {
+    width: min(1080px, calc(100% - 40px));
+    max-width: none;
+    padding: 0;
+}
+
+.inotebook-footer .row {
+    row-gap: 30px;
+}
+
+.inotebook-footer .row {
+    display: grid;
+    grid-template-columns: 1.35fr .7fr .8fr;
+    gap: 30px;
+}
+
+.footer-brand {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 750;
+    letter-spacing: -.9px;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.footer-brand span {
+    color: #82a6ff;
+}
+
+.footer-brand:hover {
+    color: #d9e4ff;
+}
+
+.footer-description {
+    max-width: 340px;
+    margin: 0;
+    color: #aab5c8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-heading {
+    margin: 5px 0 17px;
+    color: #f8faff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .35px;
+}
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 11px;
+}
+
+.footer-links a {
+    color: #aab5c8;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .2s ease, padding .2s ease;
+}
+
+.footer-links a:hover {
+    padding-left: 4px;
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #8e9bb0;
+    font-size: 12px;
+}
+
+.footer-tagline {
+    letter-spacing: .25px;
+}
+
+@media (max-width: 576px) {
+    .inotebook-footer {
+        margin-top: 14px;
+        padding: 39px 0 18px;
+    }
+
+    .inotebook-footer .container {
+        width: calc(100% - 32px);
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inotebook-footer .row {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 16px;
+    }
+
+    .inotebook-footer .row>div:first-child {
+        grid-column: 1 / -1;
+    }
+}

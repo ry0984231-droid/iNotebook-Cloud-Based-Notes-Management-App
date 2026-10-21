@@ -1,0 +1,9 @@
+{
+  "name": "inotebook-workspace",
+  "private": true,
+  "scripts": {
+    "both": "node scripts/dev.js",
+    "dev": "node scripts/dev.js",
+    "start": "npm run dev"
+  }
+}

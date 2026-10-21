@@ -1,0 +1,113 @@
+.note-card-column {
+    min-width: 0;
+}
+
+.note-card {
+    overflow: hidden;
+    min-height: 210px;
+    border: 1px solid #e7ecf3 !important;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(31, 53, 88, .055);
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.note-card:hover {
+    transform: translateY(-3px);
+    border-color: #d6e1f4 !important;
+    box-shadow: 0 15px 32px rgba(31, 53, 88, .1);
+}
+
+.note-card-body {
+    display: flex;
+    min-width: 0;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.note-card-title {
+    margin: 0 0 11px;
+    color: #1b2a43;
+    font-size: 16px;
+    font-weight: 730;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.note-card-description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0;
+    color: #68768d;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+.note-card-tag {
+    margin: auto 0 16px;
+    padding-top: 16px;
+}
+
+.note-card-tag span {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 5px 10px;
+    border-radius: 99px;
+    background: #eff4ff;
+    color: #4770c4;
+    font-size: 11px;
+    font-weight: 650;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.note-card-actions {
+    display: flex;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid #eef1f5;
+}
+
+.note-card-action {
+    display: inline-grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+    border: 0;
+    border-radius: 9px;
+    background: #f4f6fa;
+    color: #687791;
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+
+.note-card-action:hover {
+    transform: translateY(-1px);
+}
+
+.note-card-delete:hover {
+    background: #fff0f0;
+    color: #c84550;
+}
+
+.note-card-edit:hover {
+    background: #edf3ff;
+    color: #326be5;
+}
+
+.note-card-action:focus-visible {
+    outline: 3px solid rgba(71, 121, 233, .3);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .note-card,
+    .note-card-action {
+        transition: none;
+    }
+}
