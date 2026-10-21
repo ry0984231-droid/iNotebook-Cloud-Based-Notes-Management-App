@@ -1,25 +1,25 @@
-# 📒 iNotebook – Your Notes, Your Space
+# 📒 iNotebook – Notes Management Application
 
-iNotebook is a full-stack web application that allows users to securely create, manage, update, and delete their personal notes anytime, anywhere.
+iNotebook is a full-stack web application that allows users to create, update, delete, and manage their personal notes securely.
 
 ## 🚀 Features
 
-* 🔐 **User Authentication** – Secure user registration and login.
-* 📝 **Create Notes** – Add new notes with titles, descriptions, and tags.
-* ✏️ **Update Notes** – Edit your notes whenever needed.
-* 🗑️ **Delete Notes** – Remove notes you no longer need.
-* 🔒 **Secure Access** – Users can access their own notes.
-* 📱 **Responsive Design** – Works across different screen sizes.
+* 🔐 User Authentication
+* 📝 Create and save notes
+* ✏️ Update existing notes
+* 🗑️ Delete notes
+* 🔒 Secure access to personal notes
+* 📱 Responsive user interface
 
 ## 🛠️ Technologies Used
 
 **Frontend:**
 
 * React.js
-* Bootstrap
-* HTML5
-* CSS3
 * JavaScript
+* HTML
+* CSS
+* Bootstrap
 
 **Backend:**
 
@@ -27,6 +27,26 @@ iNotebook is a full-stack web application that allows users to securely create, 
 * Express.js
 * MongoDB
 * REST API
+
+## 📂 Project Structure
+
+```text
+iNotebook/
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── index.js
+│   └── package.json
+│
+├── inotebooks/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── README.md
+│
+└── README.md
+```
 
 ## ⚙️ Installation & Setup
 
@@ -36,71 +56,39 @@ iNotebook is a full-stack web application that allows users to securely create, 
 git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-### 2. Navigate to the Project Directory
+### 2. Setup Backend
 
 ```bash
-cd iNotebook
-```
-
-### 3. Install Dependencies
-
-Install the backend dependencies:
-
-```bash
+cd backend
 npm install
+npm start
 ```
 
-If your frontend is in a separate folder, navigate to that folder and install its dependencies as well.
+### 3. Setup Frontend
 
-### 4. Configure Environment Variables
+Open a new terminal and run:
 
-Create a `.env` file in your backend directory and add the required environment variables, such as your MongoDB connection string and authentication secret.
+```bash
+cd inotebooks
+npm install
+npm start
+```
+
+*Note: Use the commands configured in your `package.json` files. If your frontend uses Vite, the development command is usually `npm run dev`.*
+
+## 🔑 Environment Variables
+
+Configure the required environment variables in your backend `.env` file.
 
 ```env
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
 
-**Note:** Never upload your actual database credentials or secret keys to GitHub.
-
-### 5. Start the Application
-
-Run the backend server:
-
-```bash
-npm start
-```
-
-If the frontend is separate, start it using the appropriate command from its directory.
-
-## 📂 Project Structure
-
-```text
-iNotebook/
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   └── index.js
-├── src/
-│   ├── components/
-│   ├── App.js
-│   └── index.js
-├── public/
-├── package.json
-└── README.md
-```
-*Note: Adjust the folder structure according to your actual project.*
-
-## 🎯 Purpose
-
-The main goal of iNotebook is to provide a simple and convenient platform for managing personal notes securely and efficiently.
+**Important:** Never commit your actual secrets or database credentials to GitHub.
 
 ## 👨‍💻 Author
 
-**Your Name**
+Your Name
 
-GitHub: Add your GitHub profile link here.
-
-
-
-⭐ If you like this project, consider giving it a star!
+⭐ If you like this project, don't forget to star the repository!
