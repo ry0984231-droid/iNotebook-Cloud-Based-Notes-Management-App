@@ -4,7 +4,7 @@ import './Signup.css';
 
 
 const Signup = () => {
-    const host = process.env.REACT_APP_API_URL
+    const host = process.env.REACT_APP_API_URL || "http://localhost:5000"
     const navigate = useNavigate();
     const [credentials, setCredentials] = useState({
         name: "",
@@ -26,7 +26,13 @@ const Signup = () => {
                     body: JSON.stringify({ name, email, password })
                 }
             );
-            const json = await response.json();
+            const contentType = response.headers.get("content-type") || "";
+            const json = contentType.includes("application/json")
+                ? await response.json()
+                : {};
+            if (!response.ok && !contentType.includes("application/json")) {
+                throw new Error(`Signup endpoint returned ${response.status}. Check REACT_APP_API_URL and ensure the backend is running.`);
+            }
             if (response.ok && json.authtoken) {
                 localStorage.setItem("token", json.authtoken);
                 navigate("/", { replace: true });
@@ -36,7 +42,7 @@ const Signup = () => {
             }
         } catch (error) {
             console.error("Signup error:", error);
-            alert("Unable to connect to the server");
+            alert(error.message || "Unable to connect to the server");
         }
     };
     const onChange = (e) => {
